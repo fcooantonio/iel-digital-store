@@ -1,11 +1,12 @@
 import GlobalStyle from "./components/GlobalStyles"
+import Paths from "./routes/Paths";
 
 function App() {
 
   return (
     <>
       <GlobalStyle />
-      <h1>Hello React!</h1>
+      <Paths />
     </>
   )
 }

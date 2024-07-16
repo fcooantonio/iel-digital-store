@@ -49,33 +49,34 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-		--fonte-pequena-p: 0.375rem;
-		--fonte-pequena-m: 0.625rem;
-		--fonte-pequena-g: 0.875rem;
-		--fonte-media-p: 1rem;
-		--fonte-media-m: 1.375rem;
-		--fonte-media-g: 1.75rem;
-		--fonte-grande-p: 2.5rem;
-		--fonte-grande-m: 3.5rem;
-		--fonte-grande-g: 4.5rem;
         --color-primary: #C92071;
         --color-secondary: #B5B6F2;
         --color-tertiary: #991956;
         --color-error: #EE4266;
         --color-success: #52CA76;
         --color-warning: #F6AA1C;
-        --color-dark-gray: #1F1F1F;
-        --color-dark-gray-2: #474747;
-        --color-dark-gray-3: #666666;
-        --color-light-gray: #8F8F8F;
-        --color-light-gray-2: #CCCCCC;
-        --color-light-gray-3: #F5F5F5;
+        --color-dark-gray-one: #1F1F1F;
+        --color-dark-gray-two: #474747;
+        --color-dark-gray-three: #666666;
+        --color-light-gray-one: #8F8F8F;
+        --color-light-gray-two: #CCCCCC;
+        --color-light-gray-three: #F5F5F5;
         --color-white: #FFFFFF;
 	}
 
     * {
         box-sizing: border-box;
         text-decoration: none;
+    }
+
+    body {
+        width: 100vw;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-light-gray-three);
+    }
+
+    a {
+        color: inherit;
     }
 `;
 
