@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-import icon from '../assets/icon.svg'
+import { Logo } from "./Logo";
 import buy from '../assets/buy.svg'
 import search from '../assets/search.svg'
 
@@ -8,10 +8,7 @@ const Header = () => {
     return (
         <HeaderContainer>
             <div>
-                <div className="logo">
-                    <img src={icon} alt="logo icon" />
-                    <h1>Digital Store</h1>
-                </div>
+                <Logo />
                 <div className="search">
                     <input type="text" className="buscar" placeholder="Pesquisar produto..." />
                     <img src={search} alt="Buscar"/>
@@ -52,37 +49,15 @@ const HeaderContainer = styled.header`
         display: flex;
         align-items: center;
         gap: 15px;
-        & .logo {
-            width: max-content;
-            height: 44px;
-            gap: 15px;
-            & img {
-                width: 33px;
-                height: 33px;
-            }
-            & h1 {
-                width: max-content;
-                font-size: 2.25rem;
-                font-weight: 600;
-                line-height: 44px;
-                letter-spacing: -0.01em;
-                text-align: left;
-                color: var(--color-primary);
-            }
-        }
         & .search {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 560px;
-            min-width: 260px;
+            max-width: 560px;
             & input {
                 width: 100%;
                 height: 60px;
                 background-color:#47474704;
                 border: none;
                 border-radius: 8px;
-                padding-left: 16px;
+                padding: 0 0 0 16px;
             }
             & ::placeholder {
                 font-size: 1rem;
@@ -96,11 +71,11 @@ const HeaderContainer = styled.header`
                 width: 24px;
                 height: 24px;
                 padding: 3px;
-                align-self: center;
                 position: relative;
                 top: 50%;
                 right: 48px;
                 opacity: .5;
+                cursor: pointer;
             }
         }
         & .sign-up-in {
@@ -119,7 +94,7 @@ const HeaderContainer = styled.header`
                 }
                 &:nth-child(2) {
                     width: 114px;
-                    border-radius: 8px;
+                    border-radius: 4px;
                     padding: 8px 0;
                     color: var(--color-light-gray-three);
                     background-color: var(--color-primary);

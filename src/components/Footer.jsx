@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Logo } from "./Logo";
 
 const Footer = () => {
     return (
         <FooterContainer>
-            <h1>FOOTER</h1>
+            <Logo />
         </FooterContainer>
     );
 }
@@ -11,11 +12,12 @@ const Footer = () => {
 const FooterContainer = styled.footer`
     width: 100%;
     height: 192px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-dark-gray-one);
     color: var(--color-white);
-    position: fixed;
-    bottom: 0;
-    right: 0;
+    position: sticky;
 `;
 
 export default Footer;

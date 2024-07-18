@@ -73,6 +73,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
         font-family: 'Inter', sans-serif;
         background-color: var(--color-light-gray-three);
+        overflow-x: hidden;
     }
 
     a {
