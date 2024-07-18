@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Logo } from "./Logo";
+import logoFooter from '../assets/logo-footer.svg'
 
 const Footer = () => {
     return (
         <FooterContainer>
-            <Logo />
+            <img src={logoFooter} alt="Digital Store Logo" />
         </FooterContainer>
     );
 }
@@ -17,7 +17,9 @@ const FooterContainer = styled.footer`
     justify-content: center;
     background-color: var(--color-dark-gray-one);
     color: var(--color-white);
-    position: sticky;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 `;
 
 export default Footer;

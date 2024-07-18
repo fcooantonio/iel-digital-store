@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
-import { Logo } from "./Logo";
-import buy from '../assets/buy.svg'
+import logoHeader from '../assets/logo-header.svg'
+import shopCart from '../assets/mini-cart.svg'
 import search from '../assets/search.svg'
 
 const Header = () => {
     return (
         <HeaderContainer>
             <div>
-                <Logo />
+                <img src={logoHeader} alt="Digital Store Logo" />
                 <div className="search">
                     <input type="text" className="buscar" placeholder="Pesquisar produto..." />
                     <img src={search} alt="Buscar"/>
@@ -18,7 +18,7 @@ const Header = () => {
                     <Link>Entrar</Link>
                 </div>
                 <div className="my-shop">
-                    <img src={buy} alt="buy icon" />
+                    <img src={shopCart} alt="shopping cart icon" />
                     <span>2</span>
                 </div>
             </div>
@@ -41,18 +41,22 @@ const HeaderContainer = styled.header`
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 34px 100px;
+    padding: 34px 100px 29px;
     background-color: var(--color-white);
     box-shadow: 0px 10px 30px 0px #8D72200D;
     & div {
         width: 100%;
         display: flex;
         align-items: center;
-        gap: 15px;
+        justify-content: space-between;
+        & img {
+            width: 253px;
+            height: 44px;
+        }
         & .search {
             max-width: 560px;
             & input {
-                width: 100%;
+                width: calc(100% - 24px);
                 height: 60px;
                 background-color:#47474704;
                 border: none;
@@ -73,14 +77,16 @@ const HeaderContainer = styled.header`
                 padding: 3px;
                 position: relative;
                 top: 50%;
-                right: 48px;
+                right: 40px;
                 opacity: .5;
                 cursor: pointer;
             }
         }
         & .sign-up-in {
-            width: max-content;
-            gap: 15px;
+            width: 230px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             & a{
                 width: max-content;
                 &:nth-child(1) {
@@ -111,13 +117,15 @@ const HeaderContainer = styled.header`
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 33px;
-            height: 33px;
-            margin-left: 15px;
+            width: 40px;
+            max-width: max-content;
+            min-width: 33px;
+            height: 100%;
+            & img {
+                width: 24px;
+                height: 24px;
+            }
             & span {
-                position: relative;
-                right: 23px;
-                bottom: 9px;
                 padding: 1px 6px;
                 border-radius: 50%;
                 color: var(--color-white);
@@ -127,6 +135,9 @@ const HeaderContainer = styled.header`
                 line-height: 18px;
                 letter-spacing: 0.5px;
                 text-align: center;
+                position: relative;
+                right: 9px;
+                bottom: 11px;
             }
         }
     }
