@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import Section from "../components/Section";
 
 const HomePage = () => {
     return (
         <HomeContainer>
-            <h1>Home</h1>
+            <Section />
         </HomeContainer>
     );
 }
 
 const HomeContainer = styled.main`
     width: 100%;
-    height: 1000px;
+    height: max-content;
 `;
 
 

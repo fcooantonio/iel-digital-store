@@ -57,7 +57,7 @@ const Footer = () => {
 const FooterContainer = styled.footer`
     width: 100%;
     height: 454px;
-    padding: 72px 100px 22px;
+    padding: 72px 100px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,7 +71,6 @@ const FooterContainer = styled.footer`
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        border-bottom: 1px solid #ffffff30;
     }
     & .digital-store-infos  {
         width: 304px;
@@ -126,6 +125,8 @@ const FooterContainer = styled.footer`
     }
     & h6 {
         width: 100%;
+        padding: 22px 0;
+        border-top: 1px solid #ffffff30;
         font-size: .875rem;
         font-weight: 400;
         line-height: 24px;
