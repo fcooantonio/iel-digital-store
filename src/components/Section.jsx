@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arrow from '../assets/search.svg'
+import ProductCard from "./ProductCard";
 
 const Section = () => {
     return (
@@ -12,6 +13,13 @@ const Section = () => {
                     <img src={arrow} alt="" />
                 </div>
             </div>
+            <ul>
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+            </ul>
         </SectionContainer>
     );
 }
@@ -22,6 +30,7 @@ const SectionContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     div {
         width: 100%;
         display: flex;
@@ -55,6 +64,14 @@ const SectionContainer = styled.section`
                 height: 24px;
             }
         }
+    }
+    & ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 `;
 
