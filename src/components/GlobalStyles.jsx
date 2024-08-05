@@ -69,11 +69,14 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    html, body {
+        overflow-x: hidden;
+    }
+    
     body {
         width: 100vw;
         font-family: 'Inter', sans-serif;
         background-color: #F9F8FE;
-        overflow-x: hidden;
     }
 
     a {

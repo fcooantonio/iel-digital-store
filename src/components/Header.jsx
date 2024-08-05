@@ -100,7 +100,7 @@ const HeaderContainer = styled.header`
                 }
                 &:nth-child(2) {
                     width: 114px;
-                    border-radius: 4px;
+                    border-radius: 8px;
                     padding: 8px 0;
                     color: var(--color-light-gray-three);
                     background-color: var(--color-primary);

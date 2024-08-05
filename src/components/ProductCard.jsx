@@ -25,10 +25,10 @@ const ProductContainer = styled.li`
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    cursor: pointer;
     & img {
         width: 100%;
         height: 320px;
-        cursor: pointer;
         background-color: var(--color-white);
     }
     & > span {

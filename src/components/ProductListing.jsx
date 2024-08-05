@@ -9,6 +9,11 @@ const ProductListing = () => {
             <ProductCard />
             <ProductCard />
             <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
         </ProductListingContainer>
     );
 }
